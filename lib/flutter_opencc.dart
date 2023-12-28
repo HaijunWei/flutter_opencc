@@ -94,7 +94,7 @@ class FlutterOpenCC {
             .load('packages/flutter_opencc/assets/config/$name');
         List<int> bytes =
             data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-        file.writeAsBytes(bytes);
+        file.writeAsBytesSync(bytes);
         log('$name 文件不存在，已创建', name: 'OpenCC');
       }
     }
@@ -124,7 +124,7 @@ class FlutterOpenCC {
             .load('packages/flutter_opencc/assets/dictionary/$name');
         List<int> bytes =
             data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-        file.writeAsBytes(bytes);
+        file.writeAsBytesSync(bytes);
         log('$name 文件不存在，已创建', name: 'OpenCC');
       }
     }
